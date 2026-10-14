@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<meta name="theme-color" content="#1d2021">
+<link rel="stylesheet" href="{{root}}style.css">
+<link rel="icon" type="image/svg+xml" href="{{root}}seal.svg">
+<!-- Content is visible by default. Only if scripting is actually available do
+     we let the entrance animation hide it, so a failed script never costs a
+     visitor the text. -->
+<script>document.documentElement.className += " has-js";</script>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<div class="folio">
+  <div class="edge edge-l" aria-hidden="true"></div>
+  <div class="edge edge-r" aria-hidden="true"></div>
+  <div class="folio-corners" aria-hidden="true">{{corners}}</div>
+  <div class="folio-stains" aria-hidden="true">{{stain}}</div>
+
+  <header class="masthead">
+    <a class="wordmark" href="{{root}}index.html">
+      <span class="wm-a">PVK</span><span class="wm-b">core</span><span class="wm-c">MUN</span>
+    </a>
+    <div class="mast-rule" aria-hidden="true">
+      <span class="hatch"></span><span class="lozenge">{{seal}}</span><span class="hatch"></span>
+    </div>
+  </header>
+
+  <nav class="folio-nav" role="navigation" aria-label="sections">
+{{nav}}
+  </nav>
+
+  <main class="folio-body">
+{{content}}
+  </main>
+
+  <footer class="folio-foot">
+    <div class="foot-rule" aria-hidden="true"></div>
+    <p class="foot-motto">ars imperii, ars diplomatica</p>
+    <p class="foot-contact">
+      write to <a href="mailto:{{email}}">{{email}}</a>
+      &nbsp;·&nbsp; <a href="{{venue}}" rel="noopener">the venue</a>
+      &nbsp;·&nbsp; {{dates}}
+    </p>
+  </footer>
+</div>
+
+<script src="{{root}}site.js"></script>
+</body>
+</html>
