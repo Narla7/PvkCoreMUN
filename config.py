@@ -39,7 +39,9 @@ NAV = [
     ("chairs",       "/chairs/"),
     ("brochure",     "/brochure/"),
     ("register",     "/registrations/"),
-    ("matrix",       "/country-matrix/"),
+    ("matrix",       "https://docs.google.com/spreadsheets/d/"
+                     "17KFI2_Er-7KPYgm7KvHX8v4PEB70mZweJa-Zl0wJyG8/"
+                     "edit?gid=0#gid=0"),
 ]
 
 # --- committees ------------------------------------------------------------
